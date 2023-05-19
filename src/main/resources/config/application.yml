@@ -1,0 +1,12 @@
+
+book:
+  name: 源氏物语
+  author: 六六
+  isbn: ${random.uuid}
+  description: ${Book.name}, good Book
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    
+    mode: HTML

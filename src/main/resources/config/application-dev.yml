@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  #context-path = /api
+logging:
+  level:
+    root: info
+    com.softusing: debug
+  file:
+    name: logs/debug.log
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/book?userUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+mybatis:
+  #配置Mapper对应的xml文件路径
+  mapper-locations: classpath:mappers/*.xml
+  #配置实体类包路径
+  type-aliases-package: com.softusing.jiaokaibo.mapper
